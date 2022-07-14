@@ -1,2 +1,6 @@
 # sey-study
-방학 때도 공부하는.. 화이팅!
+
+### Commit Convention
+* Feat: 새로운 기능 추가
+* Update: 코드 수정
+* Remove : 코드 삭제
