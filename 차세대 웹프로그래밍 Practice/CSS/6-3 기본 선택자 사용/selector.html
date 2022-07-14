@@ -1,0 +1,64 @@
+<head>
+  <style>
+    /* 타입 선택자 */
+    h1 {
+      background-color: aqua;
+    }
+    h2 {
+      background-color: antiquewhite;
+    }
+    h3 {
+      background-color: rgb(198, 140, 253);
+    }
+    /* 클래스 선택자 */
+    .class1 {
+      color: orange;
+    }
+    .class2 {
+      color: cornflowerblue;
+    }
+    .class3 {
+      color: chartreuse;
+    }
+    .none {
+      background-color: transparent;
+    }
+    /* 아이디 선택자 */
+    #id1 {
+      color: azure;
+    }
+    #id2 {
+      color: gold;
+    }
+    #id3 {
+      color: crimson;
+    }
+    /* 속성 선택자입니다. */
+    h2[text$="img"] {
+      color: rebeccapurple;
+    }
+  </style>
+</head>
+<strong><h1 class="none"><타입 선택자 입니다></h1></strong>
+<h1>Hello World!</h1>
+<h2>Hello World!</h2>
+<h3>Hello World!</h3>
+<br />
+
+<strong><h1 class="none"><클래스 선택자 입니다></h1></strong>
+<h1 class="class1">Hello World!</h1>
+<h2 class="class2">Hello World!</h2>
+<h3 class="class3">Hello World!</h3>
+<br />
+
+<strong><h1 class="none"><클래스 & id 선택자 입니다></h1></strong>
+<h1 class="class1" id="id1">Hello World!</h1>
+<h2 class="class2" id="id2">Hello World!</h2>
+<h3 class="class3" id="id3">Hello World!</h3>
+<br />
+
+<strong><h1 class="none"><속성선택자 입니다></h1></strong>
+<h2 class="none">속성 선택자입니다.</h2>
+<h2 text="selector.img">속성 선택자입니다.</h2>
+
+<body></body>

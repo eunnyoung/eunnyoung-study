@@ -1,0 +1,43 @@
+<head>
+  <style>
+    /*  가상 선택자 */
+    h2:link {
+      color: bllue;
+      text-decoration: underline;
+    }
+    h2:visited {
+      color: yellow;
+    }
+    h2:hover {
+      text-decoration: overline;
+    }
+    h2:active {
+      background-color: aquamarine;
+    }
+    h2:focus {
+      background-color: violet;
+    }
+    .animationEffect {
+      width: 200px;
+      height: 100px;
+      color: violet;
+      background: yellow;
+      opacity: 0.9;
+    }
+    .animationEffect:hover {
+      width: 400px;
+      height: 50px;
+      color: azure;
+      background: cornflowerblue;
+      opacity: 0/5;
+      transition: all 1.5s linear 0.5s;
+    }
+  </style>
+</head>
+<body>
+  <h2>이벤트 가상 클래스 사용하기</h2>
+  <h3 class="animationEffect">
+    가상 클래스를 이용한 애니메이션 효과<br />
+    마우스가 위에 있으면 박스가 늘어나용
+  </h3>
+</body>
