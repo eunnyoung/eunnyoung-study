@@ -8,14 +8,15 @@
     <p style="display: inline">
       주어진 조건을 잘 읽고, 문서와 똑같이 구현해주세요.
     </p>
+    <p>문제는 총 n 개 입니다.</p>
     <!-- 1번 문제입니다. -->
-    <h2>1번 문제</h2>
+    <h2>1번 문제_테이블 만들기</h2>
     <p>
       지시사항:<br />
-      2022년 1학기 시간표를 td, tr 태그를 이용하여 만드시오 시간표 제목은
+      2022년 1학기 시간표를 td, tr 태그를 이용하여 만드시오 수강과목 제목은
       이탤릭체, 밑줄, 하이라이트 처리하시오.
       <br/>
-      <h3 style="display:flex; justify-content: center;"><i><ins><mark>2022년 1학기 시간표</mark></ins></i></h3>
+      <h3 style="display:flex; justify-content: center;"><i><ins><mark>2022년 1학기 수강과목</mark></ins></i></h3>
       <!-- 시간표의 각 칸들이 같은 너비를 갖게 하려면 어떻게 해야 할까? -->
       <table border="1px" bordercolor="lightgreen">
         <tr class="요일">
@@ -88,9 +89,58 @@
       </table>
     </p>
     <hr />
-    <!-- 1번 문제입니다. -->
-    <h2>2번 문제</h2>
+    <!-- 2번 문제입니다. -->
+    <h2>2번 문제_목록 만들기</h2>
     <p>지시사항:<br /></p>
+
+    <ul style="list-style-type:circle">
+      <h3>My favorite songs</h3>
+      <li>Hey Juliet!</li>
+      <li>Thriller</li>
+      <li>One two things</li>
+      <li>Champagne problem</li>
+      <li>Om igen</li>
+    </ul>
+    <ol type="A">
+      <h3>Countries ( or city ) where I want to go</h3>
+      <li>Portugal</li>
+      <li>New York</li>
+      <li>Japan</li>
+      <li>New Zealand</li>
+      <li>Germany</li>
+    </ol>
+    <!-- dl 은 definition lists 의 약자다 -->
+    <dl><h3>Favorite Foods</h3>
+<!-- dt는 definition term 의 약자다 -->
+<!-- dd 는 data description 의 약자다 -->
+<dt>Beverage</dt>
+<dd>- Strawberry Smoothie</dd>
+<dd>- Ice Tea</dd>
+<dt>Foods</dt>
+<dd>- Gimbap</dd>
+<dd>- Steak</dd>
+<dd>- BBQ</dd>
+    </dl>
     <hr />
+        <!-- 4번 문제입니다. -->
+        <h2>4번 문제_이미지 삽입하기</h2>
+        <p>지시사항: 가로로 정렬하기, 세로로 정렬하기<br /></p>
+        <img src="juice.png" alt="주스" border="2px" width="300px">
+        <img src="halloween.jpg" alt="주스" width="300px">
+        <hr />
+        <!-- 5번 문제입니다. -->
+        <h2>5번 문제_입력 양식 데이터 전송/초기화 버튼 만들기</h2>
+        <p>지시사항:<br /></p>
+        <form action="page.jsp" methond="get">
+          <p>학교 : <input type="text" colleage="colleage"></p>
+          <p>학과 : <input type="text" major="major" placeholder="컴퓨터공학과"></p>
+          <input type="submit" value="전송">
+          <input type="reset" value="다시작성">
+        </form>
+        <hr />
+                <!-- 3번 문제입니다. -->
+                <h2>3번 문제_문서내 특정 위치로 이동하기</h2>
+                <p>지시사항:<br /></p>
+                <hr />
   </body>
 </html>
