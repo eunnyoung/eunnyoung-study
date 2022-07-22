@@ -1,146 +1,232 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>html 연습문서</title>
-  </head>
-  <body>
-    <h2 style="display: inline">html 연습문서입니다.</h2>
-    <p style="display: inline">
-      주어진 조건을 잘 읽고, 문서와 똑같이 구현해주세요.
-    </p>
-    <p>문제는 총 n 개 입니다.</p>
-    <!-- 1번 문제입니다. -->
-    <h2>1번 문제_테이블 만들기</h2>
-    <p>
-      지시사항:<br />
-      2022년 1학기 시간표를 td, tr 태그를 이용하여 만드시오 수강과목 제목은
-      이탤릭체, 밑줄, 하이라이트 처리하시오.
-      <br/>
-      <h3 style="display:flex; justify-content: center;"><i><ins><mark>2022년 1학기 수강과목</mark></ins></i></h3>
-      <!-- 시간표의 각 칸들이 같은 너비를 갖게 하려면 어떻게 해야 할까? -->
-      <table border="1px" bordercolor="lightgreen">
-        <tr class="요일">
-          <td>/</td>
-          <td>월</td>
-          <td>화</td>
-          <td>수</td>
-          <td>목</td>
-          <td>금</td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td rowspan="3">웹프로그래밍</td>
-          <td></td>
-          <td></td>
-          <td rowspan="3">모던 자바스크립트</td>
-          <td rowspan="3">데이터베이스</td>
-        </tr>
-        <tr>
-          <td>10</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>11</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>12</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td rowspan="3">SW 설계원칙과 디자인 패턴</td>
-          <td></td>
-          <td></td>
-          <td rowspan="3">졸업 프로젝트</td>
-          <td rowspan="3">알고리즘</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td rowspan="2">디지털 공학</td>
-          <td>디지털 공학</td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </table>
-    </p>
-    <hr />
-    <!-- 2번 문제입니다. -->
-    <h2>2번 문제_목록 만들기</h2>
-    <p>지시사항:<br /></p>
 
-    <ul style="list-style-type:circle">
-      <h3>My favorite songs</h3>
-      <li>Hey Juliet!</li>
-      <li>Thriller</li>
-      <li>One two things</li>
-      <li>Champagne problem</li>
-      <li>Om igen</li>
-    </ul>
-    <ol type="A">
-      <h3>Countries ( or city ) where I want to go</h3>
-      <li>Portugal</li>
-      <li>New York</li>
-      <li>Japan</li>
-      <li>New Zealand</li>
-      <li>Germany</li>
-    </ol>
-    <!-- dl 은 definition lists 의 약자다 -->
-    <dl><h3>Favorite Foods</h3>
-<!-- dt는 definition term 의 약자다 -->
-<!-- dd 는 data description 의 약자다 -->
-<dt>Beverage</dt>
-<dd>- Strawberry Smoothie</dd>
-<dd>- Ice Tea</dd>
-<dt>Foods</dt>
-<dd>- Gimbap</dd>
-<dd>- Steak</dd>
-<dd>- BBQ</dd>
-    </dl>
-    <hr />
-        <!-- 4번 문제입니다. -->
-        <h2>4번 문제_이미지 삽입하기</h2>
-        <p>지시사항: 가로로 정렬하기, 세로로 정렬하기<br /></p>
-        <img src="juice.png" alt="주스" border="2px" width="300px">
-        <img src="halloween.jpg" alt="주스" width="300px">
-        <hr />
-        <!-- 5번 문제입니다. -->
-        <h2>5번 문제_입력 양식 데이터 전송/초기화 버튼 만들기</h2>
-        <p>지시사항:<br /></p>
-        <form action="page.jsp" methond="get">
-          <p>학교 : <input type="text" colleage="colleage"></p>
-          <p>학과 : <input type="text" major="major" placeholder="컴퓨터공학과"></p>
-          <input type="submit" value="전송">
-          <input type="reset" value="다시작성">
-        </form>
-        <hr />
-                <!-- 3번 문제입니다. -->
-                <h2>3번 문제_문서내 특정 위치로 이동하기</h2>
-                <p>지시사항:<br /></p>
-                <hr />
-  </body>
+<head>
+  <title>html 연습문서</title>
+</head>
+
+<body>
+  <h2 style="display: inline">html 연습문서입니다.</h2>
+  <p style="display: inline">
+    주어진 조건을 잘 읽고, 문서와 똑같이 구현해주세요.
+  </p>
+  <p>문제는 총 n 개 입니다.</p>
+  <!-- 1번 문제입니다. -->
+  <h2>1번 문제_테이블 만들기</h2>
+  <p>
+    지시사항:<br />
+    2022년 1학기 시간표를 td, tr 태그를 이용하여 만드시오 수강과목 제목은
+    이탤릭체, 밑줄, 하이라이트 처리하시오.
+    <br />
+  <h3 style="display:flex; justify-content: center;"><i><ins><mark>2022년 1학기 수강과목</mark></ins></i></h3>
+  <!-- 시간표의 각 칸들이 같은 너비를 갖게 하려면 어떻게 해야 할까? -->
+  <table border="1px" bordercolor="lightgreen">
+    <tr class="요일">
+      <td>/</td>
+      <td>월</td>
+      <td>화</td>
+      <td>수</td>
+      <td>목</td>
+      <td>금</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td rowspan="3">웹프로그래밍</td>
+      <td></td>
+      <td></td>
+      <td rowspan="3">모던 자바스크립트</td>
+      <td rowspan="3">데이터베이스</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td rowspan="3">SW 설계원칙과 디자인 패턴</td>
+      <td></td>
+      <td></td>
+      <td rowspan="3">졸업 프로젝트</td>
+      <td rowspan="3">알고리즘</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td rowspan="2">디지털 공학</td>
+      <td>디지털 공학</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  </p>
+  <hr />
+  <!-- 2번 문제입니다. -->
+  <h2>2번 문제_목록 만들기 & 문서내 특정 위치로 이동하기</h2>
+  <p>지시사항:<br /></p>
+  <a href="#songs">
+    <h3>Songs</h3>
+  </a>
+  <a href="#countries">
+    <h3>Countries</h3>
+  </a>
+  <a href="#foods">
+    <h3>Foods</h3>
+  </a>
+  <ul style="list-style-type:circle">
+    <h3><a name="songs">My favorite songs</a></h3>
+    <li>Hey Juliet!</li>
+    <li>Thriller</li>
+    <li>One two things</li>
+    <li>Champagne problem</li>
+    <li>Om igen</li>
+  </ul>
+  <ol type="A">
+    <h3><a name="countries">Countries ( or city ) where I want to go</a></h3>
+    <li>Portugal</li>
+    <li>New York</li>
+    <li>Japan</li>
+    <li>New Zealand</li>
+    <li>Germany</li>
+  </ol>
+  <!-- dl 은 definition lists 의 약자다 -->
+  <dl>
+    <h3><a name="foods">Favorite Foods</a></h3>
+    <!-- dt는 definition term 의 약자다 -->
+    <!-- dd 는 data description 의 약자다 -->
+    <dt>Beverage</dt>
+    <dd>- Strawberry Smoothie</dd>
+    <dd>- Ice Tea</dd>
+    <dt>Foods</dt>
+    <dd>- Gimbap</dd>
+    <dd>- Steak</dd>
+    <dd>- BBQ</dd>
+  </dl>
+  <hr />
+  <!-- 3번 문제입니다. -->
+  <h2>3번 문제_설문조사 폼 만들기(체크박스)</h2>
+  <p>지시사항:<br /></p>
+  <form>
+    <h3>당신의 성별은 무엇입니까?</h3>
+    <input type="radio" name="sex" value="female" checked>여자
+    <input type="radio" name="sex" value="male">남자
+    <p></p>
+    <h3>현재 관심 있는 학습 주제는 무엇입니까?</h3>
+    <input type="checkbox" name="subject" value="html">html<br />
+    <input type="checkbox" name="subject" value="css">css<br />
+    <input type="checkbox" name="subject" value="JavaScript">JavaScript<br />
+    <input type="checkbox" name="subject" value="react">react
+    <p></p>
+    <h3>현재 관심있는 분야는 무엇입니까?</h3>
+    <select name="area">
+      <option value="1" selected>프론트엔드</option>
+      <option value="2">백엔드</option>
+      <option value="3">인공지능</option>
+    </select>
+    <p></p>
+    <h3>당신의 학습 방법을 모두 선택해주세요</h3>
+    <select name="how01" size="3" multiple>
+      <option value="1" selected>강의</option>
+      <option value="2">도서</option>
+      <option value="3">프로젝트</option>
+    </select>
+    <p></p>
+    <h3>현재 수강 중인 강의는 무엇입니까?</h3>
+    <select name="how02">
+      <optgroup label="강의">
+        <option value="1">드림 코딩</option>
+        <option value="2">노마드 코더</option>
+        <option value="3">생활 코딩</option>
+      </optgroup>
+      <optgroup label="도서">
+        <option value="1" selected>차세대 웹 프로그래밍</option>
+        <option value="2">모던 자바스크립트 Deep Dive</option>
+      </optgroup>
+      <optgroup label="프로젝트">
+        <option value="1">프론트엔드</option>
+        <option value="2">백엔드</option>
+        <option value="3">인공지능</option>
+      </optgroup>
+
+    </select>
+    <h3>선택사항을 직접 입력하세요</h3>
+    <label>전공 분야를 입력하세요<input type="text" list="majorlist" name="major">
+      <datalist id="majorlist">
+        <option value="Software">소프트웨어</option>
+        <option value="Robot">로봇</option>
+        <option value="System">시스템</option>
+        <option value="Service">서비스</option>
+        <option value="Education">교육</option>
+      </datalist>
+      <p></p>
+      <input type="submit" value="완료">
+      <input type="reset" value="다시작성">
+    </label>
+  </form>
+  <hr />
+  <!-- 4번 문제입니다. -->
+  <h2>4번 문제_이미지 삽입하기</h2>
+  <p>지시사항: 가로로 정렬하기, 세로로 정렬하기<br /></p>
+  <img src="juice.png" alt="주스" border="2px" width="300px">
+  <img src="halloween.jpg" alt="주스" width="300px">
+  <hr />
+  <!-- 5번 문제입니다. -->
+  <h2>5번 문제_입력 양식 데이터 전송/초기화 버튼 만들기</h2>
+  <p>지시사항:<br /></p>
+  <form action="page.jsp" methond="get">
+    <fieldset>
+      <legend>개인 정보 입력</legend>
+      <p>학교 : <input type="text" colleage="colleage"></p>
+      <p>학과 : <input type="text" major="major" placeholder="컴퓨터공학과"></p>
+      <p>PW : <input type="password" name="password" placeholder="password" required></p>
+      <input type="submit" value="전송">
+      <input type="reset" value="다시작성">
+    </fieldset>
+
+  </form>
+  <h3>텍스트 공간 입력 양식</h3>
+  <form>
+    <textarea rows="4" cols="50">텍스트를 작성하는 공간입니다.</textarea>
+    <p></p>
+    <input type="submit" value="전송">
+    <input type="reset" value="다시작성">
+  </form>
+
+  <hr />
+  <!-- 3번 문제입니다. -->
+  <h2>3번 문제_문서내 특정 위치로 이동하기</h2>
+  <p>지시사항:<br /></p>
+  <hr />
+</body>
+
 </html>
