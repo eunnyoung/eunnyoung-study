@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .signUp {
+      font-size: 40px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+      margin: 25px;
+      gap: 25px;
+    }
+
+    input {
+      width: 400px;
+      height: 50px;
+      border: 2px solid cadetblue;
+      border-radius: 40px;
+    }
+
+    input::placeholder {
+      color: cadetblue;
+      padding-left: 40px;
+      /* text-align: center; */
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="signUp">Sign up</h1>
+  <form>
+    <!-- 첫번째 줄 -->
+    <div class="row">
+      <div class="yourName">
+        <input placeholder="Name"></input>
+      </div>
+      <div class="yourNumber">
+        <input placeholder="Phone Number"></input>
+      </div>
+    </div>
+    <!-- 두번째 줄 -->
+    <div class="row">
+      <div class="yourEmail">
+        <input placeholder="Email"></input>
+      </div>
+      <div class="yourPassword">
+        <input placeholder="Password"></input>
+      </div>
+  </form>
+</body>
+
+</html>
