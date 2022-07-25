@@ -14,6 +14,10 @@
       gap: 25px;
     }
 
+    h1 {
+      justify-content: flex-start;
+    }
+
     input {
       width: 400px;
       height: 50px;
@@ -26,11 +30,26 @@
       padding-left: 40px;
       /* text-align: center; */
     }
+
+    button {
+      width: 400px;
+      height: 50px;
+      background-color: dodgerblue;
+      border: none;
+      border-radius: 40px;
+    }
+
+    button:hover {
+      background-color: cornsilk;
+
+    }
   </style>
 </head>
 
 <body>
-  <h1 class="signUp">Sign up</h1>
+  <div class="row">
+    <h1 class="signUp">Sign up</h1>
+  </div>
   <form>
     <!-- 첫번째 줄 -->
     <div class="row">
@@ -49,6 +68,8 @@
       <div class="yourPassword">
         <input placeholder="Password"></input>
       </div>
+    </div>
+    <div class="row"> <button type="submit">Sign up ( Click! )</button></div>
   </form>
 </body>
 
