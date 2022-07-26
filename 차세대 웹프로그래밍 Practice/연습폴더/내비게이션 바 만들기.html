@@ -1,0 +1,62 @@
+<!DOCTYh3E html>
+  <html>
+
+  <head>
+    <style>
+      h1 {
+        display: flex;
+        justify-content: end;
+      }
+
+      /*
+      display: none 이랑
+      display: block 을 쓰면 애니메이션 효과는 없지만 
+      nav 안의 div가 함께 나타나고 사라진다.
+
+      저 둘을 안 쓸 경우,
+      애니메이션 효과는 있지만, 
+      nav 백그라운드 컬러와 nav 안의 div 가 따로 움직인다.
+      */
+      nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: cornflowerblue;
+        transition: width 200ms ease-in;
+        color: azure;
+        padding: 3%;
+      }
+
+      h1:hover+nav {
+        display: block;
+        width: 20%;
+        height: 100%;
+      }
+
+      .nav {
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 3%;
+        font-size: larger;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="hover">Hover me</h1>
+    <nav>
+      <div class="nav">
+        <div class="menu">Home</div>
+        <div class="menu">Practice</div>
+        <div class="menu">Summary</div>
+      </div>
+
+    </nav>
+  </body>
+
+  </html>
