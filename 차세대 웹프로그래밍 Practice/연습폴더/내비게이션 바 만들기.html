@@ -1,62 +1,71 @@
-<!DOCTYh3E html>
-  <html>
+<!DOCTYPE html>
+<html>
 
-  <head>
-    <style>
-      h1 {
-        display: flex;
-        justify-content: end;
-      }
+<head>
+  <style>
+    .hover {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100%;
+      z-index: 1;
+      padding: 20px;
+    }
 
-      /*
-      display: none 이랑
-      display: block 을 쓰면 애니메이션 효과는 없지만 
-      nav 안의 div가 함께 나타나고 사라진다.
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: cornflowerblue;
+      transition: width 200ms ease-in;
+      color: azure;
+      z-index: 0;
+    }
 
-      저 둘을 안 쓸 경우,
-      애니메이션 효과는 있지만, 
-      nav 백그라운드 컬러와 nav 안의 div 가 따로 움직인다.
-      */
-      nav {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 100%;
-        background-color: cornflowerblue;
-        transition: width 200ms ease-in;
-        color: azure;
-        padding: 3%;
-      }
+    .hover:hover+nav {
+      width: 200px;
+      height: 100%;
+    }
 
-      h1:hover+nav {
-        display: block;
-        width: 20%;
-        height: 100%;
-      }
+    .nav {
+      height: 60%;
+      display: flex;
+      flex-direction: column;
+      gap: 3%;
+      font-size: larger;
+      font-weight: 500;
+      padding: 30px;
+    }
 
-      .nav {
-        height: 60%;
-        display: flex;
-        flex-direction: column;
-        gap: 3%;
-        font-size: larger;
-        font-weight: 500;
-      }
-    </style>
-  </head>
+    li {
+      font-size: medium;
+      font-weight: 300;
+      margin: 0;
+    }
+  </style>
+</head>
 
-  <body>
-    <h1 class="hover">Hover me</h1>
-    <nav>
-      <div class="nav">
-        <div class="menu">Home</div>
-        <div class="menu">Practice</div>
-        <div class="menu">Summary</div>
+<body>
+  <div class="hover">
+    <h1>Hover me</h1>
+  </div>
+
+  <nav>
+    <div class="nav">
+      <div class="home">Home</div>
+      <div class="practice">Practice</div>
+      <div class="summary">Summary
+        <ul type="none">
+          <li>HTML & CSS</li>
+          <li>JavaScript</li>
+        </ul>
       </div>
+    </div>
 
-    </nav>
-  </body>
+  </nav>
+</body>
 
-  </html>
+</html>
