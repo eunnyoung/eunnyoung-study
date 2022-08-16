@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style></style>
+  <script language="JavaScript">
+    var data = 10;
+    function outer() {
+      // this.data = 20; // -> window.data = 20;
+      document.write("0. window.data = ", window.data + "<br>");
+      window.data = 20;
+      document.write("0. window.data = ", window.data + "<br>");
+      let data = 30;
+
+      document.write("1. data1 = " + data + "<br>"); // outer 의 data 값을 불러낸다.
+      // 호이스팅???
+      document.write("2. this.data= " + this.data + "<br>"); // 일반함수에서의 this 는 윈도우를 의미한다.
+      // 생성자함수에서의 this 는 자신을 호룰한 함수를 의미한다.
+      document.write("3. window.data = ", window.data + "<br>");
+      // document.write("2. this.data= " + this.this.data + "<br>");
+    }
+
+    outer();
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>

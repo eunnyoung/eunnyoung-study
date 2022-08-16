@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style></style>
+  <script language="JavaScript">
+    var data = 10;
+    function outer() {
+      // 중첩 함수
+      let data = 0;
+      function inner() {
+        this.data = 20;
+        data = 30; // outer 함수 내에서 let data=0; 를 선언했을 경우
+        // let data=0; 의 data 를 30으로 초기화한 것과 같다.
+
+        document.write("1. data1 = " + data + "<br>");
+        document.write("2. this.data= " + this.data + "<br>");
+        document.write("3. window.data = ", window.data + "<br>");
+      }
+      inner(); // 그래야지 웹 브라우저에 나타난다.
+    }
+
+    outer();
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>
