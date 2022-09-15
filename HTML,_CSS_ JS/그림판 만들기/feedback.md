@@ -8,10 +8,12 @@
 
 ## js 적인 문제
 
-- draw, fill 전환이 제대로 이루어지지 않는다.
-- erase 를 누르면 mode 전환이 되고 아니면 안된다.
 - save 가 안된다.
 - 이건 문제는 아니고, 추가적으로 구현하고 싶은 기능인데, 텍스트를 submit 하면 그림판에 뜨게하고 싶다.
+- ctx.lineWidth = lineWidth.value; 를 작성할 때
+  자동 완성으로
+  ctx.lineWidth=lineWidth.ariaValueMax;
+  가 입력되는 문제
 
 ## 문제&해결
 

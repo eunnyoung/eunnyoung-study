@@ -3,7 +3,7 @@
 
 <head>
   <link rel="stylesheet" href="styles.css">
-  <title>그림판1</title>
+  <title>drawing0914</title>
 </head>
 
 <body>
@@ -12,22 +12,22 @@
     <div class="color" style="background-color:bisque"></div>
     <div class="color" style="background-color:aquamarine"></div>
     <div class="color" style="background-color:blueviolet"></div>
-    <div class="color" style="background-color:darkturquoise"></div>
-    <div class="color" style="background-color:darkorange"></div>
+    <div class="color" style="background-color:blue"></div>
+    <div class="color" style="background-color:cornflowerblue"></div>
   </div>
   <canvas></canvas>
   <div id="btns">
-    <input type="range" max="10" min="1" value="5" />
+    <input type="text" id="text" placeholder="text here..." />
+    <label for="file">
+      Add Photo
+      <input type="file" id="file">
+    </label>
     <button id="btnMode">Draw</button>
     <button id="btnDestroy">Destroy</button>
     <button id="btnErase">Erase</button>
-    <label for="file">
-      Add Photo
-      <input type="file" id="file" />
-    </label>
     <button id="btnSave">Save</button>
-    <input type="text" id="text" placeholder="Text here..." />
   </div>
+  <script src="app.js"></script>
 </body>
 
 </html>
