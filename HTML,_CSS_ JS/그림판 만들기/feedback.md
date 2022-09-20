@@ -19,14 +19,19 @@
 
 - js 기능이 전혀 적용되지 않는 문제.
   => script 태그를 사용 안했다..
-- label 안의 텍스트가 제대로 정렬 되지 않는다. => isFilling 을 모두 false 값을 줘서 동작이 제대로 안 됐던 거다.
-
-function onModeClick() {
-if (isFilling) {
-isFilling = false;
-btnMode.innerText = "Fill";
-} else {
-isFilling = true; //isFilling = false;
-btnMode.innerText = "Draw";
-}
-}
+- label 안의 텍스트가 제대로 정렬 되지 않는다.
+  => isFilling 을 모두 false 값을 줘서 동작이 제대로 안 됐던 거다.
+  <br/><pre>function onModeClick() {
+  if (isFilling) {
+  isFilling = false;
+  btnMode.innerText = "Fill";
+  } else {
+  isFilling = true; //isFilling = false;
+  btnMode.innerText = "Draw";
+  }
+  }</pre>
+- ctx.lineWidth = lineWidth.value; 를 작성할 때
+  자동 완성으로
+  ctx.lineWidth=lineWidth.ariaValueMax;
+  가 입력되는 문제
+  => value 타이핑 후에 esc 키를 치고 ; 을 붙인다.
