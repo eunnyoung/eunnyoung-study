@@ -35,3 +35,10 @@
   ctx.lineWidth=lineWidth.ariaValueMax;
   가 입력되는 문제
   => value 타이핑 후에 esc 키를 치고 ; 을 붙인다.
+- getContext() 메서드는 무엇인가?
+  <pre><canvas>요소는 getContext() 메서드를 이용해서</pre>
+  렌더링 컨텍스트와 (렌더링 컨텍스트의) 그리기 함수들을 사용할 수 있다.
+
+### 1008
+
+- js 코드가 실행이 안된다

@@ -1,7 +1,7 @@
 body {
   background-color: aliceblue;
-  padding: 20px;
   display: flex;
+  padding: 20px;
   justify-content: center;
   align-items: center;
   gap: 20px;
@@ -9,15 +9,11 @@ body {
 canvas {
   width: 800px;
   height: 800px;
-  border-radius: 10px;
+  border-radius: 20px;
+  border: none;
   background-color: white;
 }
-#colors {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
+#colors,
 #btns {
   display: flex;
   flex-direction: column;
@@ -25,38 +21,35 @@ canvas {
   gap: 10px;
 }
 .color {
-  border-radius: 50%;
   width: 40px;
   height: 40px;
+  border-radius: 50%;
   transition: ease-in-out 0.1s;
 }
 .color:hover {
   transform: scale(1.2);
 }
-
 button,
 label,
 #text {
-  background-color: cornflowerblue;
-  transition: opacity linear 0.1s;
   width: 100px;
   height: 40px;
-  line-height: 40px;
-  border: none;
-  border-radius: 10px;
-  text-align: center;
   font-size: medium;
+  text-align: center;
+  line-height: 40px;
+  background-color: royalblue;
+  transition: opacity linear 0.1s;
+  border: none;
+  border-radius: 20px;
 }
-
 #text {
   background-color: white;
 }
-
 button:hover,
-label:hover {
+label:hover,
+#text:hover {
   opacity: 0.7;
 }
-
 #file {
   display: none;
 }
