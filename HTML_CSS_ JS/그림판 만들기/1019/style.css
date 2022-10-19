@@ -1,0 +1,59 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  background-color: aliceblue;
+}
+canvas {
+  width: 800px;
+  height: 800px;
+  border: none;
+  border-radius: 20px;
+  background-color: white;
+}
+#colors,
+#btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.color {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  transition: ease-in-out 0.1s;
+}
+.color:hover {
+  transform: scale(1.2);
+}
+button,
+label,
+#text {
+  width: 100px;
+  height: 40px;
+  background-color: royalblue;
+  color: white;
+  font-size: medium;
+  line-height: 40px;
+  text-align: center;
+  transition: opacity linear 0.1s;
+  border: none;
+  border-radius: 20px;
+}
+#text {
+  background-color: white;
+  color: royalblue;
+}
+button:hover,
+label:hover,
+#text:hover {
+  opacity: 0.6;
+}
+#file {
+  display: none;
+}

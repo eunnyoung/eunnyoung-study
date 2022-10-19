@@ -1,0 +1,1 @@
+- display: hidden 과 display: none 의 차이는 무엇인가?
