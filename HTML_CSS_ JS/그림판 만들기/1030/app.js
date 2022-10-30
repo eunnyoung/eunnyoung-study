@@ -32,7 +32,7 @@ function startDrawing() {
   isDrawing = true;
 }
 function cancelDrawing() {
-  isDrawing = true;
+  isDrawing = false;
   ctx.beginPath();
 }
 function clickMode() {
@@ -76,10 +76,10 @@ function clickCanvas() {
   }
 }
 function clickColor(event) {
-  const colorValue = event.target.dataset.color;
+  const colorValue = event.target.dataset.colorRange;
   ctx.strokeStyle = colorValue;
   ctx.fillStyle = colorValue;
-  color.value = colorValue;
+  colorRange.value = colorValue;
 }
 function changeLineWidth(event) {
   ctx.lineWidth = event.target.value;

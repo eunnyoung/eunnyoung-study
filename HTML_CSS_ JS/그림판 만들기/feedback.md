@@ -1,14 +1,12 @@
 ## 해당 폴더는 노마드 코더의 그림판 만들기 코드를 실습하는 폴더이다.
 
-## css 적인 문제
+### css
 
 - display: hidden 과 display: none 의 차이는 무엇인가?
-- textbox 안의 placeholder를 좀 더 예쁘게 배치하고 싶다.
-- all: unset 이 이해가 안된다..
+- all: unset 이 이해가 안된다
 
 ## js 적인 문제
 
-- lineWidth 조절 기능 외에는 정상 작동이 안된다.
 - 이건 문제는 아니고, 추가적으로 구현하고 싶은 기능인데, 텍스트를 submit 하면 그림판에 뜨게하고 싶다.
 
 ## 문제&해결
