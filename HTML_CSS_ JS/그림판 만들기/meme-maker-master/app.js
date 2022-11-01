@@ -45,6 +45,7 @@ function onLineWidthChange(event) {
 function onColorChange(event) {
   ctx.strokeStyle = event.target.value;
   ctx.fillStyle = event.target.value;
+  console.log(`${event.target.value}`);
 }
 
 function onColorClick(event) {
@@ -52,6 +53,9 @@ function onColorClick(event) {
   ctx.strokeStyle = colorValue;
   ctx.fillStyle = colorValue;
   color.value = colorValue;
+  console.log(
+    `${event.target.id},${event.target.dataset.color},${event.target.value}`
+  );
 }
 
 function onModeClick() {

@@ -1,6 +1,6 @@
 let isDrawing = false;
 let isFilling = false;
-const color = document.getElementsByClassName("color");
+// const color = document.getElementsByClassName("color");
 const colorRange = document.getElementById("colorRange");
 const colors = Array.from(document.getElementsByClassName("color"));
 const canvas = document.querySelector("canvas");
@@ -76,18 +76,21 @@ function clickCanvas() {
   }
 }
 function clickColor(event) {
-  const colorValue = event.target.dataset.colorRange;
-  ctx.strokeStyle = colorValue;
-  ctx.fillStyle = colorValue;
-  colorRange.value = colorValue;
+  const clickedColor = event.target.style.backgroundColor;
+  ctx.strokeStyle = clickedColor;
+  ctx.fillStyle = clickedColor;
+  console.log(`test: ${event.target.offsetX}`);
+  colorRange.value = clickedColor;
 }
-function changeLineWidth(event) {
-  ctx.lineWidth = event.target.value;
-}
+// input color 변경
 function changeColor(event) {
   ctx.strokeStyle = event.target.value;
   ctx.fillStyle = event.target.value;
 }
+function changeLineWidth(event) {
+  ctx.lineWidth = event.target.value;
+}
+
 function changeFile(event) {
   const file = event.target.files[0];
   const url = URL.createObjectURL(file);

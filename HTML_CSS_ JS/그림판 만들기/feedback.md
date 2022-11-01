@@ -19,7 +19,7 @@
   <br/>가 입력된다.
   <br/>=> value 타이핑 후에 esc 키를 치고 ; 을 붙인다.
 - getContext() 메서드는 무엇인가?
-  <pre><canvas></pre>요소는 getContext() 메서드를 이용해서
+  <canvas> 태그는 getContext() 메서드를 이용해서
   <br/>렌더링 컨텍스트와 (렌더링 컨텍스트의) 그리기 함수들을 사용할 수 있다.
 
 ## 공부 내용
