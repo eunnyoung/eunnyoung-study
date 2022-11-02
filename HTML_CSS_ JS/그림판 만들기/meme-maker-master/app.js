@@ -53,9 +53,7 @@ function onColorClick(event) {
   ctx.strokeStyle = colorValue;
   ctx.fillStyle = colorValue;
   color.value = colorValue;
-  console.log(
-    `${event.target.id},${event.target.dataset.color},${event.target.value}`
-  );
+  console.log(`${event.target.dataset.color}`);
 }
 
 function onModeClick() {

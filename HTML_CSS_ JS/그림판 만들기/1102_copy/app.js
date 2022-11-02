@@ -1,6 +1,5 @@
 let isDrawing = false;
 let isFilling = false;
-// const color = document.getElementsByClassName("color");
 const colorRange = document.getElementById("colorRange");
 const colors = Array.from(document.getElementsByClassName("color"));
 const canvas = document.querySelector("canvas");
@@ -15,11 +14,10 @@ const CANVAS_WIDTH = 800;
 const CANVAS_HEIGHT = 800;
 canvas.width = CANVAS_WIDTH;
 canvas.height = CANVAS_HEIGHT;
-// 못 쓴 변수
 const ctx = canvas.getContext("2d");
 ctx.lineWidth = lineWidth.value;
 ctx.lineCap = "round";
-// 함수들
+
 function onMove(event) {
   if (isDrawing) {
     ctx.lineTo(event.offsetX, event.offsetY);
@@ -76,10 +74,12 @@ function clickCanvas() {
   }
 }
 function clickColor(event) {
-  const clickedColor = event.target.style.backgroundColor;
+  // const clickedColor = event.target.style.backgroundColor;
+  const clickedColor = event.target.dataset.color;
   ctx.strokeStyle = clickedColor;
   ctx.fillStyle = clickedColor;
   colorRange.value = clickedColor;
+  console.log(`test: ${event.target.dataset.color}`);
 }
 // input color 변경
 function changeColor(event) {
