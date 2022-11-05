@@ -1,28 +1,26 @@
 let isDrawing = false;
 let isFilling = false;
-// const color = document.getElementsByClassName("color");
-const colorRange = document.getElementById("colorRange");
 const colors = Array.from(document.getElementsByClassName("color"));
-const canvas = document.querySelector("canvas");
+const colorRange = document.getElementById("colorRange");
+const lineWidth = document.getElementById("lineWidth");
 const file = document.getElementById("file");
 const text = document.getElementById("text");
 const btnMode = document.getElementById("btnMode");
 const btnDestroy = document.getElementById("btnDestroy");
 const btnErase = document.getElementById("btnErase");
 const btnSave = document.getElementById("btnSave");
-const lineWidth = document.getElementById("lineWidth");
 const CANVAS_WIDTH = 800;
 const CANVAS_HEIGHT = 800;
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
 canvas.width = CANVAS_WIDTH;
 canvas.height = CANVAS_HEIGHT;
-// 못 쓴 변수
-const ctx = canvas.getContext("2d");
-ctx.lineWidth = lineWidth.value;
 ctx.lineCap = "round";
-// 함수들
+ctx.lineWidth = lineWidth.value;
+// 함수
 function onMove(event) {
   if (isDrawing) {
-    ctx.lineTo(event.offsetX, event.offsetY);
+    ctx.lineTo(event.offsetX, evnet.offsetY);
     ctx.stroke();
     return;
   }
@@ -34,6 +32,28 @@ function startDrawing() {
 function cancelDrawing() {
   isDrawing = false;
   ctx.beginPath();
+}
+function clickDouble(event) {
+  const text = text.value;
+  if (text !== "") {
+    ctx.save();
+    ctx.lineWidth = 1;
+    ctx.font = "68px sans-serif";
+    ctx.fillText(text, event.offsetX, event.offsetY);
+    ctx.restore();
+  }
+}
+function clickCanvas() {
+  if (isFilling) {
+    ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+  }
+}
+function clickColor(event) {
+  const colorValue = event.target.dataset.color;
+  ctx.strokeStyle = colorValue;
+  ctx.fillStyle = colorValue;
+  colorRange.value = colorValue;
+  console.log(event.target.dataset.color);
 }
 function clickMode() {
   if (isFilling) {
@@ -60,28 +80,6 @@ function clickSave() {
   a.download = "myDrawing.png";
   a.click();
 }
-function clickDouble(event) {
-  const text = text.value;
-  if (text !== "") {
-    ctx.save();
-    ctx.lineWidth = 1;
-    ctx.font = "68px sans-serif";
-    ctx.fillRect(text, event.offsetX, event.offsetY);
-    ctx.restore();
-  }
-}
-function clickCanvas() {
-  if (isFilling) {
-    ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-  }
-}
-function clickColor(event) {
-  const clickedColor = event.target.style.backgroundColor;
-  ctx.strokeStyle = clickedColor;
-  ctx.fillStyle = clickedColor;
-  colorRange.value = clickedColor;
-}
-// input color 변경
 function changeColor(event) {
   ctx.strokeStyle = event.target.value;
   ctx.fillStyle = event.target.value;
@@ -89,7 +87,6 @@ function changeColor(event) {
 function changeLineWidth(event) {
   ctx.lineWidth = event.target.value;
 }
-
 function changeFile(event) {
   const file = event.target.files[0];
   const url = URL.createObjectURL(file);
@@ -102,18 +99,18 @@ function changeFile(event) {
 }
 // 이벤트 리스너 연결
 canvas.addEventListener("dblclick", clickDouble);
-canvas.addEventListener("mousemove", onMove);
-canvas.addEventListener("mousedown", startDrawing);
-canvas.addEventListener("mouseup", cancelDrawing);
-canvas.addEventListener("mouseleave", cancelDrawing);
 canvas.addEventListener("click", clickCanvas);
+canvas.addEventListener("mouseup", cancelDrawing);
+canvas.addEventListener("mousedown", startDrawing);
+canvas.addEventListener("mouseleave", cancelDrawing);
+canvas.addEventListener("mousemove", onMove);
 lineWidth.addEventListener("change", changeLineWidth);
+file.addEventListener("change", changeFile);
 colorRange.addEventListener("change", changeColor);
-colors.forEach((colorRange) =>
+colors.addEventListener((colorRange) =>
   colorRange.addEventListener("click", clickColor)
 );
 btnMode.addEventListener("click", clickMode);
 btnDestroy.addEventListener("click", clickDestroy);
 btnErase.addEventListener("click", clickErase);
-file.addEventListener("change", changeFile);
 btnSave.addEventListener("click", clickSave);

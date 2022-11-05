@@ -9,15 +9,16 @@ body {
 canvas {
   width: 800px;
   height: 800px;
+  background-color: white;
   border: none;
   border-radius: 20px;
-  background-color: white;
 }
-#colors,
-#btns {
+#btns,
+#colors {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
   gap: 20px;
 }
 .color {
@@ -30,28 +31,28 @@ canvas {
 .color:hover {
   transform: scale(1.2);
 }
-#text,
 button,
-label {
+label,
+#text {
   width: 100px;
   height: 40px;
-  text-align: center;
   line-height: 40px;
   font-size: medium;
-  transform: opacity linear 0.1s;
-  border: none;
-  border-radius: 20px;
+  align-items: center;
   background-color: royalblue;
   color: white;
+  transition: opacity linear 0.1s;
+  text-align: center;
+  border: none;
+  border-radius: 20px;
+}
+button:hover,
+label:hover {
+  opacity: 0.6;
 }
 #text {
   background-color: white;
   color: royalblue;
-}
-#text:hover,
-button:hover,
-label:hover {
-  opacity: 0.6;
 }
 #file {
   display: none;
