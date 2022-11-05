@@ -20,8 +20,7 @@ ctx.lineWidth = lineWidth.value;
 // 함수
 function onMove(event) {
   if (isDrawing) {
-    // ctx.lineTo(event.offsetX, evnet.offsetY);
-    ctx.lineTo(event.offsetX, event.offsetY);
+    ctx.lineTo(event.offsetX, evnet.offsetY);
     ctx.stroke();
     return;
   }
@@ -84,7 +83,6 @@ function clickSave() {
 function changeColor(event) {
   ctx.strokeStyle = event.target.value;
   ctx.fillStyle = event.target.value;
-  console.log(event.target.value);
 }
 function changeLineWidth(event) {
   ctx.lineWidth = event.target.value;
