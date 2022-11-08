@@ -1,5 +1,3 @@
-## 해당 폴더는 노마드 코더의 그림판 만들기 코드를 실습하는 폴더이다.
-
 ### css
 
 - display: none 과 visibility: hidden 의 차이는 무엇인가?
