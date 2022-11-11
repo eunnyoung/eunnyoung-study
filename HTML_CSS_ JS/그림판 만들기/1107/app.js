@@ -113,5 +113,5 @@ colors.forEach((colorRange) =>
 file.addEventListener("change", changeFile);
 btnMode.addEventListener("click", clickMode);
 btnDestroy.addEventListener("click", clickDestroy);
-btnErase.addEventListener("click", clickErase);
+// btnErase.addEventListener("click", clickErase);
 btnSave.addEventListener("click", clickSave);
