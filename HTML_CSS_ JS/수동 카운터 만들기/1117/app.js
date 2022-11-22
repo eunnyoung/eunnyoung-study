@@ -1,4 +1,4 @@
-const counter = document.getElementById("cjounter");
+const counter = document.getElementById("counter");
 const increase = document.getElementById("increase");
 const decrease = document.getElementById("decrease");
 let num = 0;
