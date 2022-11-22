@@ -3,7 +3,7 @@ const increase = document.getElementById("increase");
 const decrease = document.getElementById("decrease");
 let num = 0;
 const render = function () {
-  counter.innerHTML = num;
+  counter.innerText = num;
 };
 increase.onclick = function () {
   num++;
