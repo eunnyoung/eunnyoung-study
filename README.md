@@ -14,3 +14,4 @@
 - Feat: 새로운 파일 추가
 - Update: 코드 수정
 - Remove : 코드 삭제
+- Chore: 기타
