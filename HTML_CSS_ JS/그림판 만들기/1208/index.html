@@ -3,19 +3,19 @@
 
 <head>
   <link rel="stylesheet" href="style.css" />
-  <title>1124</title>
+  <title>1208</title>
 </head>
 
 <body>
   <div id="colors">
     <input type="color" id="colorRange" />
-    <div class="color" style="background-color:#f1c40f" data-color="#f1c40f"></div>
-    <div class="color" style="background-color:#1abc9c" data-color="#1abc9c"></div>
+    <div class="colors" style="background-color:#f1c40f" data-color="#f1c40f"></div>
+    <div class="colors" style="background-color:#1abc9c" data-color="#1abc9c"></div>
   </div>
   <canvas></canvas>
   <div id="btns">
-    <input type="range" id="lineWidth" />
-    <input type="text" id="text" />
+    <input type="range" id="lineWidth" max="10" min="1" value="5" step="1" />
+    <input type="text" id="text" placeholder="text here..." />
     <label for="file">
       Add Photo
       <input type="file" id="file" />

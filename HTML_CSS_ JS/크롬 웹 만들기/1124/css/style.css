@@ -1,0 +1,22 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  /* background-color: royalblue; */
+}
+.hidden {
+  display: none;
+}
+/* img {
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+} */
+h2 {
+  color: gold;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+}
+#layer {
+  position: relative;
+}
